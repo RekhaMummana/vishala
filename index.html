@@ -197,45 +197,89 @@
     border: 1px solid var(--gold);
     object-fit: contain; /* Shows the full image, no cropping */
 }
+/* --- UNIVERSAL NAV STYLES --- */
+nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(2, 22, 14, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.logo-container img { height: 60px; }
+
+.brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Comfortable gap for laptops */
+}
+
+.nav-links a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fdf8ee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* --- THE MOBILE FIX (ADD THIS) --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 15px !important; /* Tighten edges */
+    }
+
+    .logo-container img { height: 40px !important; }
+    .brand-name { font-size: 0.8rem !important; }
+
+    .nav-links {
+        gap: 10px !important; /* Drastically reduce gap to fit all 4 items */
+    }
+
+    .nav-links a {
+        font-size: 0.6rem !important; /* Scale down text */
+        letter-spacing: 0.5px !important;
+    }
+}
     </style>
 </head>
 <body>
 
     <div class="bg-fixed"></div>
 
-   <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(2, 22, 14, 0.95); backdrop-filter: blur(15px); padding: 20px 50px; border-bottom: 1px solid rgba(212, 175, 55, 0.15); display: flex; justify-content: space-between; align-items: center;">
-    
-    <div style="display: flex; flex-direction: column; align-items: flex-start; align-items: anchor-center; gap: 5px; margin-left: 1cm;">
-    <img src="Gemini_Generated_Image_6l542u6l542u6l54-removebg-preview.png" alt="Vishala Logo" style="height: 80px;">
-    
-    <a href="#hero" style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--gold); letter-spacing: 4px; text-decoration: none; font-weight: 700;">
-        VISHALA
-    </a>
-</div>
-    <ul style="list-style: none; display: flex; gap: 40px; margin: 0; padding: 0;">
-    <li>
-        <a href="#offers" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #fdf8ee; text-decoration: none; transition: 0.3s;">
-            Offers
-        </a>
-    </li>
-    <li>
-        <a href="#collections" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #fdf8ee; text-decoration: none; transition: 0.3s;">
-            Collections
-        </a>
-    </li>
-    <li>
-        <a href="#location" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #fdf8ee; text-decoration: none; transition: 0.3s;">
-            Location
-        </a>
-    </li>
-    <li>
-        <a href="#contact" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #fdf8ee; text-decoration: none; transition: 0.3s;">
-            Contact Us
-        </a>
-    </li>
-</ul>
-</nav>
+   <nav>
+    <div class="logo-container">
+        <img src="Gemini_Generated_Image_6l542u6l542u6l54-removebg-preview.png" alt="Vishala Logo">
+        <a href="#hero" class="brand-name">VISHALA</a>
+    </div>
 
+    <ul class="nav-links">
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
     <section class="hero" id="hero">
         <div class="brand-launch-box" data-aos="zoom-in" data-aos-duration="1500">
     <img src="Gemini_Generated_Image_6l542u6l542u6l54-removebg-preview.png" 
@@ -320,7 +364,7 @@
                 📍 Nizam Sagar Chowrastha,<br>
                 Kamareddy, Telangana
             </p>
-            <a href=" https://maps.app.goo.gl/FoRfjGgub6a797tp6?g_st=iw" target="_blank" 
+            <a href="https://maps.google.com" target="_blank" 
                style="display:inline-block; padding: 12px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.8rem; transition: 0.3s;">
                 GET DIRECTIONS
             </a>
