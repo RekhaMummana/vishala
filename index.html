@@ -29,7 +29,7 @@
             scroll-behavior: smooth;
         }
 
-        /* --- BACKGROUND ANIMATION --- */
+        
         .bg-fixed {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
             background: radial-gradient(circle at center, #063d2a 0%, #02160e 100%);
@@ -41,7 +41,7 @@
             50% { transform: scale(1.1); }
         }
 
-        /* --- STICKY NAV --- */
+        
         nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             background: rgba(2, 22, 14, 0.9);
@@ -92,7 +92,7 @@
             line-height: 1;
         }
 
-        /* STRETCHED SUBTITLE */
+       
         .sub-title {
             font-family: 'Poppins', sans-serif;
             color: var(--gold);
@@ -115,7 +115,7 @@
             letter-spacing: 5px;
         }
 
-        /* --- OFFERS --- */
+        
         .section-padding { padding: 80px 8%; }
         .section-title {
             text-align: center; font-family: 'Cinzel'; font-size: 2.5rem; color: var(--gold);
@@ -136,7 +136,7 @@
         .offer-emoji { font-size: 3.5rem; display: block; margin-bottom: 15px; }
         .offer-card h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
 
-        /* --- COLLECTIONS (FIT-IN) --- */
+       
         .collections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .collection-item {
             position: relative; height: 500px; overflow: hidden; border-radius: 15px;
@@ -150,15 +150,15 @@
             text-align: center; font-family: 'Playfair Display'; font-size: 1.8rem;
         }
 
-        /* --- CAROUSEL --- */
+        
         .swiper { width: 100%; max-width: 1000px; margin: 40px auto; border-radius: 15px; border: 1px solid var(--gold); }
         .swiper-slide img { width: 100%; height: auto; display: block; object-fit: contain; }
 
-        /* --- FOOTER --- */
+        
         .contact-box { background: var(--glass); padding: 50px; border-radius: 20px; text-align: center; border: 1px solid var(--gold); max-width: 800px; margin: 0 auto; }
         footer { padding: 40px; text-align: center; border-top: 1px solid var(--gold); margin-top: 60px; }
 
-        /* BACK TO TOP */
+        
         #backToTop {
             position: fixed; bottom: 30px; right: 30px; display: none;
             background: var(--gold); color: var(--deep-emerald);
@@ -175,7 +175,7 @@
     /* This creates a buffer so the sticky header doesn't hide the section title */
     scroll-padding-top: 120px; 
 }
-    /* --- FLEXIBLE EVENT GALLERY --- */
+   
 .swiper {
     width: 100%;
     max-width: 1000px;
@@ -197,7 +197,6 @@
     border: 1px solid var(--gold);
     object-fit: contain; /* Shows the full image, no cropping */
 }
-/* --- UNIVERSAL NAV STYLES --- */
 nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     background: rgba(2, 22, 14, 0.95);
@@ -243,7 +242,7 @@ nav {
     transition: 0.3s;
 }
 
-/* --- THE MOBILE FIX (ADD THIS) --- */
+
 @media (max-width: 768px) {
     nav {
         padding: 10px 15px !important; /* Tighten edges */
