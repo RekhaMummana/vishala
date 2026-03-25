@@ -10,6 +10,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <style>
+        /* RESPONSIVE IMAGE FIX */
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to stack on mobile */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.collection-item {
+    flex: 1 1 300px; /* Base size 300px, but grows/shrinks */
+    max-width: 100%; /* Prevents the image from going off-screen */
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.collection-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the aspect ratio perfect */
+    display: block;
+}
+
+/* Fix for small phones */
+@media (max-width: 480px) {
+    .collection-item {
+        height: 300px; /* Shorter height for small screens */
+    }
+    nav ul {
+        gap: 10px; /* Tighter menu for small phones */
+    }
+}
         :root {
             --emerald: #063d2a;
             --deep-emerald: #02160e;
